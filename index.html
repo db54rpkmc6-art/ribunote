@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex,nofollow">
+<title>RIBUNOTE | 開発版</title>
+<style>
+:root{--bg:#fffafd;--card:#fff;--ink:#28232c;--muted:#786f7e;--line:#eee5ef;--lav:#eee6ff;--pink:#ffe8f2;--purple:#7658a8}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Hiragino Sans","Yu Gothic",sans-serif}
+button,input,select{font:inherit}.app{max-width:680px;margin:auto;min-height:100vh;padding-bottom:78px}
+header{padding:18px 18px 13px;background:#fff;border-bottom:1px solid var(--line);position:sticky;top:0;z-index:4}
+.brand{font-weight:900;letter-spacing:.08em;font-size:21px}.sub{font-size:11px;color:var(--muted);margin-top:3px}
+main{padding:18px}.hero{padding:20px;border-radius:22px;background:linear-gradient(135deg,var(--lav),var(--pink));margin-bottom:20px}
+.hero small{font-weight:800}.hero h1{font-size:27px;line-height:1.3;margin:7px 0}.hero p{font-size:13px;color:var(--muted);line-height:1.7;margin:0}
+.chips{display:flex;gap:8px;overflow:auto;padding-bottom:4px;margin-bottom:20px}.chip{white-space:nowrap;border:1px solid var(--line);background:#fff;border-radius:999px;padding:10px 14px}
+h2{font-size:18px;margin:22px 0 12px}.card{background:var(--card);border:1px solid var(--line);border-radius:17px;padding:15px;margin:10px 0}
+.badge{display:inline-block;font-size:11px;background:var(--lav);border-radius:999px;padding:5px 9px}.date{font-weight:900;margin-right:12px}
+.row{display:flex;align-items:center}.muted{color:var(--muted);font-size:12px;margin-top:4px}
+.page{display:none}.page.active{display:block}.field{width:100%;padding:13px;border:1px solid var(--line);border-radius:13px;background:#fff;margin:6px 0 13px;font-size:16px}
+.primary{width:100%;border:0;border-radius:13px;background:var(--purple);color:#fff;padding:13px;font-weight:800}
+.notice{font-size:12px;line-height:1.7;color:var(--muted)}
+nav{position:fixed;bottom:0;left:0;right:0;margin:auto;max-width:680px;height:68px;background:rgba(255,255,255,.97);border-top:1px solid var(--line);display:grid;grid-template-columns:repeat(5,1fr);z-index:5;padding-bottom:env(safe-area-inset-bottom)}
+nav button{border:0;background:transparent;font-size:11px;color:var(--muted)}nav button.active{color:var(--purple);font-weight:900}.ico{display:block;font-size:19px;margin-bottom:3px}
+.cal{display:grid;grid-template-columns:repeat(7,1fr);gap:4px;text-align:center}.cal div{padding:9px 2px;font-size:12px}.hit{background:var(--lav);border-radius:10px;font-weight:900}
+</style>
+</head>
+<body>
+<div class="app">
+<header><div class="brand">♡ RIBUNOTE</div><div class="sub">クロミの「いま」が見つかる。非公式情報メディア｜開発版</div></header>
+<main>
+<section class="page active" id="home">
+<div class="hero"><small>TODAY'S PICK</small><h1>今日のクロミ情報を<br>まとめてチェック。</h1><p>新商品・コラボ・イベント・発売日を、探しやすく整理するサイトを制作中です。</p></div>
+<div class="chips"><button class="chip">新商品</button><button class="chip">コラボ</button><button class="chip">イベント</button><button class="chip">キャンペーン</button></div>
+<h2>最新情報</h2>
+<div class="card"><span class="badge">NEW</span><b style="display:block;margin-top:9px">新商品情報のサンプル</b><div class="muted">ここには確認済みの最新情報を表示します。</div></div>
+<div class="card"><span class="badge">COLLAB</span><b style="display:block;margin-top:9px">コラボ情報のサンプル</b><div class="muted">公式情報源と最終確認日も掲載する予定です。</div></div>
+<h2>今月の発売予定</h2>
+<div class="card row"><span class="date">10/15</span><div><b>新作グッズA</b><div class="muted">サンプルデータ</div></div></div>
+<div class="card row"><span class="date">10/22</span><div><b>コラボ商品B</b><div class="muted">サンプルデータ</div></div></div>
+</section>
+<section class="page" id="news"><h2>新着情報</h2><p class="notice">新しく確認した情報を新しい順に整理します。</p><div class="card"><span class="badge">新商品</span><h3>新作グッズ情報</h3><p class="notice">発売日・価格・販売場所・情報源をまとめます。</p></div><div class="card"><span class="badge">イベント</span><h3>イベント情報</h3><p class="notice">開催期間や場所を整理して表示します。</p></div></section>
+<section class="page" id="calendar"><h2>発売カレンダー</h2><p class="notice">商品データから発売日を一覧化する予定です。</p><div class="card cal"><div>日</div><div>月</div><div>火</div><div>水</div><div>木</div><div>金</div><div>土</div><div></div><div></div><div></div><div>1</div><div>2</div><div>3</div><div>4</div><div>5</div><div>6</div><div>7</div><div>8</div><div>9</div><div>10</div><div>11</div><div>12</div><div>13</div><div>14</div><div class="hit">15</div><div>16</div><div>17</div><div>18</div><div>19</div><div>20</div><div>21</div><div class="hit">22</div><div>23</div><div>24</div><div>25</div></div></section>
+<section class="page" id="goods"><h2>グッズ検索</h2><label>カテゴリー<select class="field" id="cat"><option>すべて</option><option>ぬいぐるみ</option><option>ファッション</option><option>バッグ</option><option>文房具</option><option>コスメ</option><option>スマホ用品</option></select></label><label>価格帯<select class="field"><option>指定なし</option><option>〜1,000円</option><option>1,000〜3,000円</option><option>3,000〜5,000円</option><option>5,000円〜</option></select></label><button class="primary" id="search">この条件で探す</button><div class="card notice" id="result">現在はUI確認用のサンプルです。</div></section>
+<section class="page" id="menu"><h2>メニュー</h2><div class="card">RIBUNOTEについて</div><div class="card">広告・アフィリエイトについて</div><div class="card">プライバシーポリシー</div><div class="card">免責事項</div><p class="notice">RIBUNOTEはクロミに関する情報を扱う非公式メディアとして制作中です。株式会社サンリオおよび関連企業が運営する公式サイトではありません。</p></section>
+</main>
+<nav>
+<button class="active" data-page="home"><span class="ico">⌂</span>ホーム</button>
+<button data-page="news"><span class="ico">▤</span>新着</button>
+<button data-page="calendar"><span class="ico">□</span>発売日</button>
+<button data-page="goods"><span class="ico">⌕</span>グッズ</button>
+<button data-page="menu"><span class="ico">☰</span>メニュー</button>
+</nav>
+</div>
+<script>
+const pages=document.querySelectorAll('.page'),buttons=document.querySelectorAll('nav button');
+buttons.forEach(b=>b.addEventListener('click',()=>{pages.forEach(p=>p.classList.remove('active'));buttons.forEach(x=>x.classList.remove('active'));document.getElementById(b.dataset.page).classList.add('active');b.classList.add('active');scrollTo(0,0)}));
+document.getElementById('search').addEventListener('click',()=>{document.getElementById('result').textContent=document.getElementById('cat').value+' の検索結果をここに表示します。現在は開発用サンプルです。'});
+</script>
+</body>
+</html>
